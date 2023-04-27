@@ -6,7 +6,7 @@ def main():
         contents = str(contents);
         print('reading file content');
         print('contents->',contents);
-        c1=date.today()
+        c1=str(date.today())
         print("date.today()->",c1);
         c1=c1+'\n';
         print("c1-now->",c1);
