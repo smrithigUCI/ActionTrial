@@ -11,6 +11,5 @@ def main():
         if (str(date.today())==contents):
           print("today's date is->",contents);
           f.write(str(date.today()),"was awesome as always")
-
 if __name__=='__main__':
   main()
