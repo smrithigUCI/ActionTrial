@@ -1,3 +1,4 @@
+from datetime import date
 def main():
   print("Hello from GitHub");
   with open('.github/workflows/outputFile1.txt') as f:
