@@ -6,7 +6,7 @@ def main():
         print('reading file content');
         print('contents->',contents);
         if contents == '':
-          print("insude the text file");
+          print("found file empty");
 
 if __name__=='__main__':
   main()
