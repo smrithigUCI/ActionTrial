@@ -1,6 +1,6 @@
 def main():
   print("Hello from GitHub");
-  with open('outputFile1.txt') as f:
+  with open('.github/workflows/outputFile1.txt') as f:
         contents = f.readlines();
         contents = str(contents);
         if contents == '':
