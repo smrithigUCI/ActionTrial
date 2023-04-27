@@ -8,7 +8,7 @@ def main():
         print('contents->',contents);
         c1=str(date.today())
         print("date.today()->",c1);
-        c1=c1+'\n';
+        c1=c1+"\"+"n";
         print("c1-now->",c1);
         if contents == '':
           print("found file empty");
