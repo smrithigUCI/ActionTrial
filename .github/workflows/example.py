@@ -8,7 +8,7 @@ def main():
         print('reading file content');
         print('contents->',contents);
         print('date.today()->',date.today());
-        if (date.today()==contents):
+        if (str(date.today())==contents):
           print("today's date is->",contents);
 
 if __name__=='__main__':
