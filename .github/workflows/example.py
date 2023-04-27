@@ -4,11 +4,13 @@ def main():
   with open('.github/workflows/outputFile1.txt') as f:
         contents = f.readlines();
         contents = str(contents);
+        contents.rstrip();
         print('reading file content');
         print('contents->',contents);
+        print('date.today()->',date.today());
         if contents == '':
           print("found file empty");
-        if (date.today()==contents.rstrip()):
+        if (date.today()==contents):
           print("today's date is->",contents);
 
 if __name__=='__main__':
