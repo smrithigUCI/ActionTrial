@@ -3,6 +3,7 @@ def main():
   with open('.github/workflows/outputFile1.txt') as f:
         contents = f.readlines();
         contents = str(contents);
+        print('reading file content');
         if contents == '':
           print("insude the text file");
 
