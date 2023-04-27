@@ -8,8 +8,6 @@ def main():
         print('reading file content');
         print('contents->',contents);
         print('date.today()->',date.today());
-        if contents == '':
-          print("found file empty");
         if (date.today()==contents):
           print("today's date is->",contents);
 
