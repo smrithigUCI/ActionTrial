@@ -6,13 +6,9 @@ def main():
         contents = str(contents);
         print('reading file content');
         print('contents->',contents);
-        c1=str(date.today())
-        print("date.today()->",c1);
-        c1=c1+"\"+"n";
-        print("c1-now->",c1);
         if contents == '':
           print("found file empty");
-        if (date.today()==c1):
+        if (date.today()==contents.rstrip()):
           print("today's date is->",contents);
 
 if __name__=='__main__':
