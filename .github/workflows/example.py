@@ -4,7 +4,7 @@ def main():
   with open('.github/workflows/outputFile1.txt') as f:
         contents = f.readlines();
         contents = str(contents);
-        contents.rstrip();
+        contents = contents.rstrip();
         print('reading file content');
         print('contents->',contents);
         print('date.today()->',date.today());
