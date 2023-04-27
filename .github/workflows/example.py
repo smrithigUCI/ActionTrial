@@ -10,6 +10,6 @@ def main():
         print('date.today()->',date.today());
         if (str(date.today())==contents):
           print("today's date is->",contents);
-          f.write(f"{date.today()} was awesome as always")
+          f.write(" SG awesome as always")
 if __name__=='__main__':
   main()
