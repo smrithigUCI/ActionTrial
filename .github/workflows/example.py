@@ -1,6 +1,6 @@
 def main():
   print("Hello from GitHub");
-  with open('outputFile.txt') as f:
+  with open('outputFile1.txt') as f:
         contents = f.readlines();
         contents = str(contents);
         if contents == '':
