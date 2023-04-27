@@ -2,8 +2,8 @@ from datetime import date
 def main():
   print("Hello from GitHub");
   with open('.github/workflows/outputFile1.txt') as f:
-        contents = f.readlines();
-        contents = str(contents);
+        contents = f.readlines()
+        contents = contents.pop();
         contents = contents.rstrip();
         print('reading file content');
         print('contents->',contents);
