@@ -7,6 +7,8 @@ def main():
         print('contents->',contents);
         if contents == '':
           print("found file empty");
+        if (date.today()==contents):
+          print("today's date is->",contents);
 
 if __name__=='__main__':
   main()
