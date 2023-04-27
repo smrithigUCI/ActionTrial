@@ -4,6 +4,7 @@ def main():
         contents = f.readlines();
         contents = str(contents);
         print('reading file content');
+        print('contents->',contents);
         if contents == '':
           print("insude the text file");
 
