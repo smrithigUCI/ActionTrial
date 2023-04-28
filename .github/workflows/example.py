@@ -10,5 +10,6 @@ def main():
         print('date.today()->',date.today());
         if (str(date.today())==contents):
           print("today's date is-> SG is awesome->",contents);
+          print(f'The dates match : content of file:->{contents} \n today date :{date.today()}');
 if __name__=='__main__':
   main()
