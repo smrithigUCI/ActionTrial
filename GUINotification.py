@@ -153,7 +153,7 @@ class temperatureClass :
     
     #To call WISE by entering the URL    
     def apiCallToWise(self):
-        with open('C:\\Users\\Smrithi Ganesh\\ActionTrial\\.github\\workflows\\outputFile1.txt') as f:
+        with open('.github/workflows/outputFile1.txt') as f:
             contents = f.readlines()
             
         #switching the relay 0 ON only on the predicted threshold date
@@ -260,24 +260,7 @@ class temperatureClass :
             raise Exception('Error', resp.status_code)
 """
 
-my_repo = git.Repo('C:\\Users\\Smrithi Ganesh\\ActionTrial')
-print(my_repo)
-with my_repo.config_writer() as git_config:
-    git_config.set_value('user', 'email', 'someone@example.com')
-    git_config.set_value('user', 'name', 'AwesomeLocalSmG')
 
-# To check configuration values, use `config_reader()`
-with my_repo.config_reader() as git_config:
-    print(git_config.get_value('user', 'email'))
-    print(git_config.get_value('user', 'name'))
-if my_repo.is_dirty(untracked_files=True):
-    print('Changes detected.')
-    my_repo.index.add(['C:\\Users\\Smrithi Ganesh\\ActionTrial\\.github\\workflows\\advlogoblackbgresize.png', 'C:\\Users\\Smrithi Ganesh\\ActionTrial\\.github\\workflows\\samuelilogoblackbgresize.png','C:\\Users\\Smrithi Ganesh\\ActionTrial\\.github\\workflows\\outputFile1.txt'])
-    # Provide a commit message
-    my_repo.index.commit('Python commit.')
-
-for remote in my_repo.remotes:
-    print(f'- {remote.name} {remote.url}')
 #intatntiating app window 
 app=customtkinter.CTk()
 app.config(bg='black')
@@ -295,9 +278,9 @@ tc = temperatureClass(48,"http://192.168.1.14",app)
 nameLabel = customtkinter.CTkLabel(app,text="Welcome to Floral Hub Notification for Irvine , CA",font=("Arial Bold", 40))
 nameLabel.place(relx=0.50, rely=0.45, anchor=tkinter.CENTER)
 #image at the top of the page along with its position
-image1 = Image.open("logo5050.jpg")
-image2 = Image.open("C:\\Users\\Smrithi Ganesh\\ActionTrial\\.github\\workflows\\advlogoblackbgresize.png")
-image3 = Image.open("C:\\Users\\Smrithi Ganesh\\ActionTrial\\.github\\workflows\\samuelilogoblackbgresize.png")
+image1 = Image.open(".github/workflows/logo5050.jpg")
+image2 = Image.open(".github/workflows/advlogoblackbgresize.png")
+image3 = Image.open(".github/workflows/samuelilogoblackbgresize.png")
 img1 = ImageTk.PhotoImage(image1)
 img2 = ImageTk.PhotoImage(image2)
 img3 = ImageTk.PhotoImage(image3)
@@ -320,11 +303,11 @@ button1.place(relx=0.35, rely=0.55, anchor=tkinter.CENTER)
 button2.place(relx=0.65, rely=0.55, anchor=tkinter.CENTER)
 
 #If previous prediction already done , displaying the threshold date alone
-if os.path.getsize('C:\\Users\\Smrithi Ganesh\\ActionTrial\\.github\\workflows\\outputFile1.txt') == 0:
+if os.path.getsize('.github/workflows/outputFile1.txt') == 0:
     button = customtkinter.CTkButton(app,text="START PREDICTION",command=tc.extractTempFromWeb,font=("Arial Bold", 15))
     button.place(relx=0.50, rely=0.50, anchor=tkinter.CENTER)
 else :
-    with open('C:\\Users\\Smrithi Ganesh\\ActionTrial\\.github\\workflows\\outputFile1.txt') as f:
+    with open('.github/workflowsoutputFile1.txt') as f:
         contents = f.readlines()
         contents = contents.pop();
         contents = contents.rstrip();
