@@ -1,6 +1,6 @@
 datetime
 numpy
-customTkInter
+customtkinter
 matplotlib
 pandas
 requests
