@@ -25,7 +25,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Python script POC
-        run: python .github/workflows/example.py
+        run: python GUINotification.py
         
       - name: install python packages
         run: |
