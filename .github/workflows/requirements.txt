@@ -10,3 +10,4 @@ xlsxwriter
 styleframe
 selenium
 bs4
+Pillow
