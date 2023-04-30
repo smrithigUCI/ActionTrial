@@ -9,9 +9,11 @@ Commit remark : Borders for image done
 
 
 #GUI required import
-from tkinter import *
+#from tkinter import *
+#import tkinter as tk
+import tkinter
 import numpy as np
-import tkinter.font as font
+#import tkinter.font as font
 import customtkinter
 import matplotlib.pyplot as plt
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
