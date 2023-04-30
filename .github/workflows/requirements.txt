@@ -6,7 +6,6 @@ matplotlib
 pandas
 requests
 schedule 
-time
 xlsxwriter
 styleframe
 selenium
