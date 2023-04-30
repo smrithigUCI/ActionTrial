@@ -1,7 +1,7 @@
 datetime
 tk
 numpy
-customtkinter
+customTkInter
 matplotlib
 json
 pandas
