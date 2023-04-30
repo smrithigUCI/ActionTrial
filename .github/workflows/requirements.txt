@@ -3,7 +3,6 @@ tk
 numpy
 customTkInter
 matplotlib
-json
 pandas
 requests
 os
