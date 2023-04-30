@@ -6,7 +6,6 @@ Commit remark : Borders for image done
 """
 #importing the required python modules
 #git import to push the threshold value
-import git
 
 
 #GUI required import
