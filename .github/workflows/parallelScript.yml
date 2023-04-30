@@ -30,6 +30,6 @@ jobs:
       - name: install python packages
         run: |
           python -m pip install --upgrade pip
-          sudo apt-get install python-tk
-          sudo apt-get install python-customtkinter
+          python -m pip install-tk
+          python -m pip install-customtkinter
           pip install -r .github/workflows/requirements.txt
