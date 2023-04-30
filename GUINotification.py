@@ -10,7 +10,7 @@ Commit remark : Borders for image done
 
 #GUI required import
 #from tkinter import *
-import tkinter as tk
+#import tkinter as tk
 import numpy as np
 #import tkinter.font as font
 import customtkinter
