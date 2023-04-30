@@ -1,1 +1,15 @@
 datetime
+tkinter
+numpy
+customtkinter
+matplotlib
+json
+pandas
+requests
+os
+schedule 
+time
+xlsxwriter
+styleframe
+selenium
+bs4
