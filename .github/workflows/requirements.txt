@@ -1,5 +1,4 @@
 datetime
-tk
 numpy
 customTkInter
 matplotlib
