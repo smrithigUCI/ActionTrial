@@ -1,6 +1,8 @@
 datetime
 selenium
 beautifulsoup4
+lxml
+bs4
 numpy
 matplotlib
 pandas
