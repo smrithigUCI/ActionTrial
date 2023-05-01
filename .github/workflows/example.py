@@ -92,12 +92,12 @@ def main():
             thresholdDate = date.today()+ datetime.timedelta(days=perfectDay)
             print(thresholdDate)
             break
-           cumGDD.insert(dayNo,cumGDD[dayNo-1]+gDD[dayNo])
-           j=j+2
-           dayNo = dayNo+1
+          cumGDD.insert(dayNo,cumGDD[dayNo-1]+gDD[dayNo])
+         j=j+2
+         dayNo = dayNo+1
        dayNumber = dayNumber+1
-     if (str(date.today())==contents):
-          print("today's date is-> SG is awesome->",contents);
-          print(f'The dates match : content of file:->{contents} \n today date :{date.today()}');
+      if (str(date.today())==contents):
+        print("today's date is-> SG is awesome->",contents);
+        print(f'The dates match : content of file:->{contents} \n today date :{date.today()}');
 if __name__=='__main__':
   main()
