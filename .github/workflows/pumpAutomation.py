@@ -61,11 +61,13 @@ with open(".github/workflows/outputFile1.txt",'r+') as f:
         ht = [];
         lt = [] ;
         
+        
         del lowTemp[dayNo:len(Temp)]
         del highTemp[dayNo:len(Temp)]
         del avgTemp[dayNo:len(Temp)]
         del gDD[dayNo:len(Temp)]
         del cumGDD[dayNo:len(Temp)]
+        
         while j<len(Temp)-2:
             highTemp.insert(dayNo,Temp[j].replace("°",""));
             lowTemp.insert(dayNo,Temp[j+1].replace("°",""));
@@ -95,6 +97,12 @@ with open(".github/workflows/outputFile1.txt",'r+') as f:
             j=j+2
             dayNo = dayNo+1
         dayNumber = dayNumber+1
+        with open(".github/workflows/outputFile1.txt",'w') as f3:
+            f2.write(thresholdDate);
+        with open(".github/workflows/outputFile1.txt",'w') as f4:
+            f2.write(thresholdDate);
+        with open(".github/workflows/GddOutputFile.txt",'w') as f1:
+            f1.write(cumGDD);
     else:
         print('good day')
         
