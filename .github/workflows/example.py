@@ -36,16 +36,16 @@ def main():
   highTemp=[]
   for tempExtraction in tempFromWeb:
     Temp.append(tempExtraction.find('span',{'class' : 'DailyContent--temp--1s3a7'}).get_text())
-for rainChance in rainFromWeb:
+  for rainChance in rainFromWeb:
     rainTotal.append(rainChance.find('span',{'class' : 'DailyContent--value--1Jers'}).get_text())
-for r in rainTotal:
+  for r in rainTotal:
     if "%" in r:
-        rain.append((r.replace("%","")));
-while i<=25:
+      rain.append((r.replace("%","")));
+  while i<=25:
     rainPrecipitaion.append((int(rain[i])+int(rain[i+1]))*0.5)
     i=i+2
-print('\n inside high low')
-with open("C:\\Users\\Smrithi Ganesh\\ActionTrial\\.github\\workflows\\outputFile1.txt",'r+') as f:
+  print('\n inside high low')
+  with open("C:\\Users\\Smrithi Ganesh\\ActionTrial\\.github\\workflows\\outputFile1.txt",'r+') as f:
     contents = f.readlines()
     contents = contents.pop();
     contents = contents.rstrip();
