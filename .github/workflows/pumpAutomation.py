@@ -97,12 +97,12 @@ with open(".github/workflows/outputFile1.txt",'r+') as f:
             j=j+2
             dayNo = dayNo+1
         dayNumber = dayNumber+1
-        with open(".github/workflows/rainOutputFile.txt",'w') as f4:
+        with open(".github/workflows/rainOutputFile.txt",'a') as f4:
             f4.writelines(reducedRain)
-        with open(".github/workflows/outputFile1.txt",'w') as f3:
+        with open(".github/workflows/outputFile1.txt",'a') as f3:
             f3.writelines(thresholdDate)
         
-        with open(".github/workflows/GddOutputFile.txt",'w') as f1:
+        with open(".github/workflows/GddOutputFile.txt",'a') as f1:
             f1.writelines(strCumGDD);
     else:
         print('good day')
