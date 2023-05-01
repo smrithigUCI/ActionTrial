@@ -102,4 +102,4 @@ with open("C:\\Users\\Smrithi Ganesh\\ActionTrial\\.github\\workflows\\outputFil
         print("today's date is-> SG is awesome->",contents);
         print(f'The dates match : content of file:->{contents} \n today date :{date.today()}');
   if __name__=='__main__':
-  main()
+    main()
