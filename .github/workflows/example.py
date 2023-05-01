@@ -1,51 +1,56 @@
-from datetime import date
+
+import pandas as pd
 import requests
 import os
+import schedule 
+import time
+#import xlsxwriter
 import datetime
-#from styleframe import StyleFrame
+from datetime import date
+from styleframe import StyleFrame
 from selenium import webdriver
 from bs4 import BeautifulSoup
-def main():
-  strCumGDD=[]
-  daysArray=[]
-  reducedRain=[]
-  chrome_options = webdriver.ChromeOptions()
-  chrome_options.add_argument('--ignore-certificate-errors')
-  chrome_options.add_argument('--incognito')
-  chrome_options.add_argument('--headless')
-  i=0;
-  indDayNo=0;
-  base_temperature=48;
-  Temp=[];
-  cumGDD=[];
-  avgTemp=[]
-  gDD=[];
-  cumGDD=[];
-  driver = webdriver.Chrome(options = chrome_options)
-  source =driver.get('https://weather.com/weather/tenday/l/7f3924e156afb7814c8d12d1e4ea0138b2e46869a57075ebc763c2963d75ec82')
-  source_code=driver.page_source
 
-  soup = BeautifulSoup(source_code,'lxml')
-  tempFromWeb =soup.find_all('div',class_='DailyContent--ConditionSummary--2gdfo')
-  rainFromWeb =soup.find_all('div',class_='DailyContent--label--30_yg')
-  rainPrecipitaion=[]
-  rain=[]
-  rainTotal=[]
-  dayNumber=0;
-  lowTemp=[]
-  highTemp=[]
-  for tempExtraction in tempFromWeb:
+strCumGDD=[]
+daysArray=[]
+reducedRain=[]
+chrome_options = webdriver.ChromeOptions()
+chrome_options.add_argument('--ignore-certificate-errors')
+chrome_options.add_argument('--incognito')
+chrome_options.add_argument('--headless')
+i=0;
+indDayNo=0;
+base_temperature=48;
+Temp=[];
+cumGDD=[];
+avgTemp=[]
+gDD=[];
+cumGDD=[];
+driver = webdriver.Chrome(options = chrome_options)
+source =driver.get('https://weather.com/weather/tenday/l/7f3924e156afb7814c8d12d1e4ea0138b2e46869a57075ebc763c2963d75ec82')
+source_code=driver.page_source
+
+soup = BeautifulSoup(source_code,'lxml')
+tempFromWeb =soup.find_all('div',class_='DailyContent--ConditionSummary--2gdfo')
+rainFromWeb =soup.find_all('div',class_='DailyContent--label--30_yg')
+rainPrecipitaion=[]
+rain=[]
+rainTotal=[]
+dayNumber=0;
+lowTemp=[]
+highTemp=[]
+for tempExtraction in tempFromWeb:
     Temp.append(tempExtraction.find('span',{'class' : 'DailyContent--temp--1s3a7'}).get_text())
-  for rainChance in rainFromWeb:
+for rainChance in rainFromWeb:
     rainTotal.append(rainChance.find('span',{'class' : 'DailyContent--value--1Jers'}).get_text())
-  for r in rainTotal:
+for r in rainTotal:
     if "%" in r:
-      rain.append((r.replace("%","")));
-  while i<=25:
+        rain.append((r.replace("%","")));
+while i<=25:
     rainPrecipitaion.append((int(rain[i])+int(rain[i+1]))*0.5)
     i=i+2
-  print('\n inside high low')
-  with open("C:\\Users\\Smrithi Ganesh\\ActionTrial\\.github\\workflows\\outputFile1.txt",'r+') as f:
+print('\n inside high low')
+with open("C:\\Users\\Smrithi Ganesh\\ActionTrial\\.github\\workflows\\outputFile1.txt",'r+') as f:
     contents = f.readlines()
     contents = contents.pop();
     contents = contents.rstrip();
@@ -91,10 +96,5 @@ def main():
             dayNo = dayNo+1
         dayNumber = dayNumber+1
     else:
-      if (str(date.today())==contents):
-        print("today's date is-> SG is awesome->",contents);
-        print(f'The dates match : content of file:->{contents} \n today date :{date.today()}');
-  
-
-if __name__=='__main__':
-  main() 
+        print('good day')
+        
