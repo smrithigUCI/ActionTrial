@@ -1,5 +1,4 @@
 from datetime import date
-import pandas as pd
 import requests
 import os
 import schedule 
