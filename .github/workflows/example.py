@@ -85,13 +85,13 @@ def main():
             while i<daycount:
               reducedRain.append(rainPrecipitaion[i])
               i=i+1;
-             print('reducedRain->',reducedRain)
-             min_value = min(reducedRain)
-             perfectDay = reducedRain.index(min_value)
-             print(perfectDay)
-             thresholdDate = date.today()+ datetime.timedelta(days=perfectDay)
-             print(thresholdDate)
-             break
+            print('reducedRain->',reducedRain)
+            min_value = min(reducedRain)
+            perfectDay = reducedRain.index(min_value)
+            print(perfectDay)
+            thresholdDate = date.today()+ datetime.timedelta(days=perfectDay)
+            print(thresholdDate)
+            break
            cumGDD.insert(dayNo,cumGDD[dayNo-1]+gDD[dayNo])
            j=j+2
            dayNo = dayNo+1
