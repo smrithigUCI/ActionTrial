@@ -8,5 +8,4 @@ requests
 schedule 
 xlsxwriter
 styleframe
-
 Pillow
