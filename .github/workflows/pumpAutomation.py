@@ -84,13 +84,13 @@ with open(".github/workflows/outputFile1.txt",'r+') as f:
                     print(cumGDD)
                     i=0;
                     while i<daycount:
-                        reducedRain.append(rainPrecipitaion[i])
+                        reducedRain.append(str(rainPrecipitaion[i]))
                         i=i+1;
                     print('reducedRain->',reducedRain)
                     min_value = min(reducedRain)
                     perfectDay = reducedRain.index(min_value)
                     print(perfectDay)
-                    thresholdDate = date.today()+ datetime.timedelta(days=perfectDay)
+                    thresholdDate = str(date.today()+ datetime.timedelta(days=perfectDay))
                     print(thresholdDate)
                     break
                 cumGDD.insert(dayNo,cumGDD[dayNo-1]+gDD[dayNo])
@@ -103,7 +103,7 @@ with open(".github/workflows/outputFile1.txt",'r+') as f:
             f3.writelines(thresholdDate)
         
         with open(".github/workflows/GddOutputFile.txt",'w') as f1:
-            f1.writelines(cumGDD);
+            f1.writelines(strCumGDD);
     else:
         print('good day')
         
