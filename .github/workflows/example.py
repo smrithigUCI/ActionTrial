@@ -50,7 +50,7 @@ while i<=25:
     rainPrecipitaion.append((int(rain[i])+int(rain[i+1]))*0.5)
     i=i+2
 print('\n inside high low')
-with open("C:\\Users\\Smrithi Ganesh\\ActionTrial\\.github\\workflows\\outputFile1.txt",'r+') as f:
+with open(".github/workflows/outputFile1.txt",'r+') as f:
     contents = f.readlines()
     contents = contents.pop();
     contents = contents.rstrip();
