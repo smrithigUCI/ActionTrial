@@ -1,6 +1,6 @@
 datetime
 selenium
-bs4
+beautifulsoup4
 numpy
 matplotlib
 pandas
