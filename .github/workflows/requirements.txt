@@ -1,4 +1,6 @@
 datetime
+selenium
+bs4
 numpy
 matplotlib
 pandas
@@ -6,6 +8,5 @@ requests
 schedule 
 xlsxwriter
 styleframe
-selenium
-bs4
+
 Pillow
