@@ -1,8 +1,6 @@
 from datetime import date
 import requests
 import os
-import schedule 
-import time
 import xlsxwriter
 import datetime
 from datetime import date
