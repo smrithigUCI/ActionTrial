@@ -28,7 +28,7 @@ jobs:
           pip install -r .github/workflows/requirements.txt
       # Runs a single command using the runners shell
       - name: Python script POC
-        run: python .github/workflows/example.py
+        run: python .github/workflows/pumpAutomation.py
         
       
 
