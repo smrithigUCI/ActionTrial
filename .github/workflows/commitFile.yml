@@ -13,7 +13,7 @@ jobs:
         run: |
           git config user.name 'smrithigUCI'
           git config user.email 'smrithig@uci.edu'
-          git remote set-url origin https://github.com/smrithigUCI/ActionTrial.git
+          git remote set-url origin git@github.com:smrithigUCI/ActionTrial.git
           git add report.txt
           git commit -am "Automated report"
           git push origin HEAD:main
