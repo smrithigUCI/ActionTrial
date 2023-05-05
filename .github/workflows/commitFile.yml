@@ -1,7 +1,7 @@
 name: Push commit
 on: workflow_dispatch
 jobs:
-  report:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
@@ -14,5 +14,6 @@ jobs:
           git config --global user.name 'smrithigUCI'
           git config --global user.email 'smrithig@uci.edu'
           git remote set-url origin https://github.com/smrithigUCI/ActionTrial.git
+          git add report.txt
           git commit -am "Automated report"
           git push
