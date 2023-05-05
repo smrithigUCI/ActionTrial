@@ -12,7 +12,7 @@ jobs:
       - name: Commit report
         run: |
           git remote -v
-          git remote set-url origin https://github.com/smrithigUCI/ActionTrial.git
+          git remote set-url origin git@github.com:username/repo.git
           git remote -v
           git add report.txt
           git checkout -b master
