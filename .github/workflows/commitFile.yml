@@ -11,9 +11,4 @@ jobs:
         run: date +%s > report.txt
       - name: Commit report
         run: |
-          git config user.name 'smrithigUCI'
-          git config user.email 'smrithig@uci.edu'
-          git remote set-url origin git@github.com:smrithigUCI/ActionTrial.git
-          git add report.txt
-          git commit -am "Automated report"
-          git push origin HEAD:main
+          git remote -v
