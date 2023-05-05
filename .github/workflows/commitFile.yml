@@ -15,4 +15,5 @@ jobs:
           git remote set-url origin git@github.com:smrithigUCI/ActionTrial.git
           git remote -v
           git add report.txt
+          git checkout -b master
           git push origin master
