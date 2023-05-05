@@ -16,4 +16,4 @@ jobs:
           git remote set-url origin https://github.com/smrithigUCI/ActionTrial.git
           git add report.txt
           git commit -am "Automated report"
-          git push
+          git push origin HEAD:main
