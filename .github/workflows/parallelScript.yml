@@ -31,6 +31,6 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Python script POC
-        run: python fileManipulation.py
+        run: python .github/workflows/fileManipulation.py
         
       
