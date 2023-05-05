@@ -6,7 +6,7 @@ def UploadToDrive(filepath,filename):
 
     para = {
         "name":filename,
-        "parents":["1DBr5USVxg6LJw_HDiBK743vjIFo4gIRK"]
+        "parents":["1oMYGCzitX98Oldeu5MDmhBerTko2WcKe"]
     }
     files = {
         'data':('metadata',json.dumps(para),'application/json;charset=UTF-8'),
