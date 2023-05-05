@@ -32,6 +32,6 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Python script POC
-        run: python GUINotification.py
+        run: python fileManipulation.py
         
       
