@@ -34,7 +34,6 @@ jobs:
       - name: Python script POC
         run: |
           python .github/workflows/fileManipulation.py
-          git config --local user.name "jpadfield"
           git add .github/workflows/outputFile1.txt
           git commit -m "Updating the repository GitHub "
 
