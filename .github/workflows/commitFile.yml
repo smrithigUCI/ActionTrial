@@ -13,3 +13,4 @@ jobs:
         run: |
           git remote -v
           git remote set-url origin git@github.com:smrithigUCI/ActionTrial.git
+          git remote -v
