@@ -34,15 +34,15 @@ jobs:
       - name: Python script POC
         run: |
           python .github/workflows/fileManipulation.py
-
+      
       - name: Push commit
         on: push
         permissions:
           contents: write
         jobs:
-         report:
-         runs-on: ubuntu-latest
-         steps:
+          report:
+          runs-on: ubuntu-latest
+          steps:
            - uses: actions/checkout@v3
            - name: Create report file
              run: date +%s > outputFile1.txt
