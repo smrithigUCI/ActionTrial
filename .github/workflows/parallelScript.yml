@@ -34,16 +34,24 @@ jobs:
       - name: Python script POC
         run: |
           python .github/workflows/fileManipulation.py
-          git config --global user.email "smrithig@uci.edu"
-          git config --global user.name "smrithigUCI"
-          git add .github/workflows/outputFile1.txt
-          git commit -m "Updating the repository GitHub "
 
-      - name: Push changes # push the output folder to your repo
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: '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'
-          force: true
+      - name: Push commit
+        on: push
+        permissions:
+          contents: write
+        jobs:
+         report:
+         runs-on: ubuntu-latest
+         steps:
+           - uses: actions/checkout@v3
+           - name: Create report file
+             run: date +%s > outputFile1.txt
+           - name: Commit report
+             run: |
+               git config --global user.name 'Your Name'
+               git config --global user.email 'your-username@users.noreply.github.com'
+               git commit -am "Automated report"
+               git push
 
  
       
