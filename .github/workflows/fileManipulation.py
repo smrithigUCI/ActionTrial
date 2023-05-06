@@ -15,8 +15,10 @@ file_metadata = {
 
 file_content = 'This is the content of the text file.'
 
-file = drive_service.files().create(body=file_metadata,media_body=io.BytesIO(file_content.encode('utf-8'))).execute()
+media = drive_service.files().create(
+    body=file_metadata,
+    media_body=io.BytesIO(file_content.encode('utf-8'))
+)
 
-print('File created:', file.get('id'))
-
+file = media.execute()
 
