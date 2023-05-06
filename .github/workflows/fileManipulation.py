@@ -8,7 +8,7 @@ drive_service = build('drive', 'v3', credentials=credentials)
 
 file_metadata = {
     'name': 'example.txt',  # Name of the file
-    'mimeType': 'text/plain'  # MIME type of the file
+    'type': 'string'  # MIME type of the file
 }
 
 file_content = 'This is the content of the text file.'
