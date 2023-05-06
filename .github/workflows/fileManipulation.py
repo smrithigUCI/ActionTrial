@@ -4,6 +4,7 @@ credentials = service_account.Credentials.from_service_account_file('.github/wor
 service = build('drive', 'v3', credentials=credentials)
 # Find the file by its name or other identifier
 folder_id = '1oMYGCzitX98Oldeu5MDmhBerTko2WcKe'
+file_name='myDate1.txt'
 response = service.files().list(q=f"name='{file_name}' and '{folder_id}' in parents").execute()
 print(response)
 
