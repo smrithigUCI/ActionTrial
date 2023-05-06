@@ -1,18 +1,17 @@
-import json
-import requests
-def UploadToDrive(filepath,filename):
+from googleapiclient.discovery import build
+from google.oauth2 import service_account
+credentials = service_account.Credentials.from_service_account_file('.github/workflows/client_secret_217221968848-frebl3d7fmf13o36hq5fjv0ar5c88091.apps.googleusercontent.com.json')
+service = build('drive', 'v3', credentials=credentials)
+# Find the file by its name or other identifier
+file_name = 'outputFile1.docx'
+response = service.files().list(q=f"name='{file_name}'").execute()
+file_id = response['files'][0]['id']
+content = 'Hello, World!'
+media_body = service.files().get_media(fileId=file_id).execute()
+media_body += content.encode()
 
-    headers = {"Authorization":"Bearer ya29.a0Ael9sCO2lIUKj9IjCAF9pn1Jh4ibbE9raibgODyeQ6qdMIpc_TCm5tzR2a8g5mg_qqf3y_EcKJMBI2RLGaXAiFGp8gWHYVDsiYY--kPtAuZzc0EwYpoRwGrWxXs33lGUZySYXQnkepoK2OSynPRwVN3GP3AqaCgYKAcESARMSFQF4udJhyn8VBTqoAMQRkXCI9HzufQ0163"}
+updated_file = service.files().update(
+    fileId=file_id,
+    media_body=media_body
+).execute()
 
-    para = {
-        "name":filename,
-        "parents":["1oMYGCzitX98Oldeu5MDmhBerTko2WcKe"]
-    }
-    files = {
-        'data':('metadata',json.dumps(para),'application/json;charset=UTF-8'),
-        'file':open(filepath,'rb')
-    }
-
-    r = requests.post("https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart",headers=headers,files=files)
-    print(f"Uploaded {filename} to Drive")
-UploadToDrive(".github/workflows/outputFile1.txt","outputFile1.txt")
