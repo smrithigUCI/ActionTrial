@@ -4,10 +4,11 @@ name: Parallel Script
 
 # Controls when the workflow will run
 on:
+ workflow_dispatch:
   # Allows you to run this workflow manually from the Actions tab
   #schedule:
     #- cron: "40 1 * * */1"
-  workflow_dispatch:
+   
 
 
 
