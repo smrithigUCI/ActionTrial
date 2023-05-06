@@ -5,6 +5,7 @@ service = build('drive', 'v3', credentials=credentials)
 # Find the file by its name or other identifier
 response = service.files().list().execute()
 files = response.get('files', [])
+print(files)
 for file in files:
     print(f"File Name: {file['name']}, File ID: {file['id']}")
 """file_name = 'outputFile1'
