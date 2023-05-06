@@ -8,8 +8,8 @@ response = service.files().list(q=f"name='{file_name}'").execute()
 print('response->',response)
 file_id = response['files'][0]
 print('file_id->',file_id)
-content = 'Hello, World!'"""
-"""media_body = service.files().get_media(file_id).execute()
+content = 'Hello, World!
+media_body = service.files().get_media(file_id).execute()
 print('media_body->',media_body)
 media_body += content.encode()
 updated_file = service.files().update(
