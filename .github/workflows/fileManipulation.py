@@ -12,7 +12,7 @@ metadata = {
 
 media = service.files().create(
     body=metadata,
-    media_body=io.BytesIO(file_content.encode())
+    #media_body=io.BytesIO(file_content.encode())
 ).execute()
 
 
