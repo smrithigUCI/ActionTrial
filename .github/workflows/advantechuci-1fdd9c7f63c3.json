@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "advantechuci",
+  "private_key_id": "1fdd9c7f63c3af51966440b92980e350796ac7d1",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDYt8iqE4x5lgHv\nhW0Imlks4u8ulKCzB8GsBoELY7wWPoNynyDjNM1LdFJMuevd461X55ufJ5ULBrRZ\n9QrqvMVJzSR5z92tuC51dKLlwyE1SzNyImUTcjf2yC9IgI5olcVYA/TO4Dy8ckl7\nyW/Tz2TS0kt+VJ8crbcIRfF3Nc07yebziN/MJycGQOi0cpQjCFfjAOEC1m2q/e6G\ntu3qe2wi8+yBeTqy6FSXCT9S1iX2TeYcu8kZsrViApLJ9T/77UqhTv5J72GEtYTY\nv8GSA0DNEVS/nC9e5stMyZVWxoZvAl5mJzZ0aRNNU0cDK2hThNqoS9yIFkiE8Z33\nZ1MM0+AFAgMBAAECggEAKCrwO23CJKsEEtQFIIoTKzmooVaU7nnqkKrn8id7LhhK\nHs2Vt+cKggi+VFBFgmv3rgpUkswwWMnWVbIQYu+4FXS7ZQR9DvzLR6PlqXZgSlN0\n5puvZkpOSyRRdzu0qXfRCv44urtfJoJ8UkBExNp00op9yZ1/nD4qZZMpLTJApuru\n27W8LyBdQkEKS7S+5E0BYOQZDu8iiNK79x7Mb4bTM2MFYKHx9VvaqFuQmCaNVRDx\n5Ax/hSg4IocZl136WG0ZgxQlIIMX2N1BSCFRauOVS3xdvyA5V9a/z9hwnHNpsDQe\nmPXu3KrtCKEZuVMO3lBPXxOdMZ5Vn9NWilZh7XmDIQKBgQDu8Z2mpxB3EEMJ/c4l\nc4zhyoIC6C1ryGv7XEj1a8iSuHIE0lD5ULzYFClaLJ72K1IhZo/SSyACgR+/geAO\n+WVpO+93BAcC5Q9Ur6fvUTyxuq9AIVOX9q2WhFA99s26k3A4WP6xxUy2bPE/YIz0\noqs7K7zpuiZRoKHELHd8QWgxPQKBgQDoMATPiket0bxw6s1umaaLsy1e+mPZkbL1\nQVffSDwjfaOWjViMFqlYzjFJ1NH5PMMuuEVjyzpC3oqvvS96bV9argbGzQQTbagf\nvB8voflozECLiPopLsVHcXMHu/GAWn1UoDWm4FjKpTN3pAkb99k6rQgVMbeVT3rb\ngbPKUjVGaQKBgHjunlynN0UbXOKkqv33cnkgdhakjcB8SnKIbYCQ0Y24fjSEgWj9\nfOZbpeY2qSlsGYBAGVBUp1m9ImVZhR3vCW1uYS86QZYsekrhMDyGQBKvqlzpwRYr\nSgXg53/E9rCUSHqsSBOPCNlXX+40noJ+Be3HoDAm/5fWlajk3IBt1h79AoGANc8L\nDl3phqrYlQKVYVBSfIWluiElCsLtSlE+YAyJg2AWjUlsf+qwjFgcrBOaJbyjLyyd\nSCdM9TpFwbyCSEkYlBdIksHoc+gx0kjyoUNUXakYPD4eW3TvW0M7eUthCHHwIbCP\nPoE3kp7+cneddNHXkfWPrfm7peqpej1wwS6UEiECgYEA0YwK9rYZqfrns/wViGC2\nZ68jsUPtsvOm4OVfS75totuVyKGM33PINjC08KWyST3aCw0pZS1eKbFbNBKHNuXR\ntAPPqEBG2UH1uStUXHEDmQv7ilEKb4YRBa+XV515UtHDy/9w+WeX4mcmTYVnmp9f\nbagUxdg0+gxWkSVeuNkM5Rs=\n-----END PRIVATE KEY-----\n",
+  "client_email": "advantech-uci-account@advantechuci.iam.gserviceaccount.com",
+  "client_id": "107788867403834259937",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/advantech-uci-account%40advantechuci.iam.gserviceaccount.com"
+}
