@@ -7,11 +7,6 @@ drive_service = build('drive', 'v3', credentials=credentials)
 
 # Find the file by its name or other identifier
 file_content = 'Hello, World!'
-file_name = 'example.txt'
-metadata = {
-    'name': file_name,
-    'mimeType': 'text/plain'
-}
 
 file_metadata = {
     'name': 'example.txt',  # Name of the file
