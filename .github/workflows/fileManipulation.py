@@ -5,8 +5,6 @@ import io
 credentials = service_account.Credentials.from_service_account_file('.github/workflows/advantechuci-1fdd9c7f63c3.json')
 drive_service = build('drive', 'v3', credentials=credentials)
 
-# Find the file by its name or other identifier
-file_content = 'Hello, World!'
 
 file_metadata = {
     'name': 'example.txt',  # Name of the file
