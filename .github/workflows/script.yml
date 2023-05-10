@@ -28,13 +28,8 @@ jobs:
           pip install -r .github/workflows/requirements.txt
       # Runs a single command using the runners shell
       - name: Python script POC
-        run: python .github/workflows/pumpAutomation.py
-      - name: Modify README.md
-        uses: jaywcjlove/github-action-modify-file-content@main
-        with:
-        path: outputFile1.txt
-        body: "overwrite file content {{date:YYYY-MM-DD HH:mm:ss}}",
-        overwrite: 'true'
+        run: python .github/workflows/fileManipulation.py
+     
 
         
       
