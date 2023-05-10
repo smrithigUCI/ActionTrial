@@ -12,6 +12,11 @@ print('Hi')
 container_client = blob_service_client.get_container_client(container_name)
 blob_list =[]
 print('Hi')
-sas_i=generate_blob_sas(account_name=account_name,container_name=container_name,blob_name='myDate1.txt',account_key=account_key,permissions=BlobSasPermissions(read=True),expiry=datetime.utcnow()+timedelta(hours=1))
-df=pd.read_csv("https://sunflowerweedimage.blob.core.windows.net/sunfloweweedimagecontainer/myDate1.txt?sp=r&st=2023-05-08T11:00:41Z&se=2023-05-08T19:00:41Z&spr=https&sv=2022-11-02&sr=b&sig=R7ixtj8w7C1lYymi7Qx0XGKtfXHtWVtUIeDrBU2l9ZQ%3D")
-print(df)
+sas_i=generate_blob_sas(account_name=account_name,container_name=container_name,blob_name='myDate2.txt',account_key=account_key,permissions=BlobSasPermissions(read=True),expiry=datetime.utcnow()+timedelta(hours=1))
+print(sas_i)
+df=pd.read_csv("https://sunflowerweedimage.blob.core.windows.net/sunfloweweedimagecontainer/myDate2.txt?sp=racw&st=2023-05-10T09:46:35Z&se=2023-05-23T17:46:35Z&spr=https&sv=2022-11-02&sr=b&sig=YQ4cTyFbPZKjQDdEIuHl2EzY6W0C3iWfXXmpA%2FzBH%2Bc%3D")
+try:
+    df[date.today()];
+    print('all good')
+except:
+    print('not the date')
