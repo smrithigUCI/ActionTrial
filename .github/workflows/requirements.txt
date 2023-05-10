@@ -16,3 +16,4 @@ schedule
 xlsxwriter
 styleframe
 Pillow
+azure-storage-blob
