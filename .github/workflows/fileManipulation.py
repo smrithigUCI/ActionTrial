@@ -1,22 +1,17 @@
-from google.oauth2 import service_account
-from googleapiclient.discovery import build
-import io
+from azure.storage.blob import BlobServiceClient , generate_blob_sas,BlobSasPermissions
+import pandas as pd
+from datetime import datetime,timedelta
+print('Hi')
+account_name='sunflowerweedimage'
+account_key='+55v1G3ZgPTBu2p9iu6YXfi3SrS+jXkPX9eR4pydpO6q5OCKyScdpLMzMLe9YiGwHbXa1viUUBflu+ASt+RoWKg=='
+container_name='sunfloweweedimagecontainer'
 
-credentials = service_account.Credentials.from_service_account_file('.github/workflows/advantechuci-1fdd9c7f63c3.json')
-drive_service = build('drive', 'v3', credentials=credentials)
-
-
-file_metadata = {
-    'name': 'example.txt',  # Name of the file
-    'type': 'string'  # MIME type of the file
-}
-
-file_content = 'This is the content of the text file.'
-
-media = drive_service.files().create(
-    body=file_metadata,
-    media_body=io.BytesIO(file_content.encode('utf-8'))
-)
-
-file = media.execute()
-
+connection_string='DefaultEndpointsProtocol=https;AccountName='+account_name+';AccountKey='+account_key+';EndpointSuffix=core.windows.net';
+blob_service_client =BlobServiceClient.from_connection_string(connection_string)
+print('Hi')
+container_client = blob_service_client.get_container_client(container_name)
+blob_list =[]
+print('Hi')
+sas_i=generate_blob_sas(account_name=account_name,container_name=container_name,blob_name='myDate1.txt',account_key=account_key,permissions=BlobSasPermissions(read=True),expiry=datetime.utcnow()+timedelta(hours=1))
+df=pd.read_csv("https://sunflowerweedimage.blob.core.windows.net/sunfloweweedimagecontainer/myDate1.txt?sp=r&st=2023-05-08T11:00:41Z&se=2023-05-08T19:00:41Z&spr=https&sv=2022-11-02&sr=b&sig=R7ixtj8w7C1lYymi7Qx0XGKtfXHtWVtUIeDrBU2l9ZQ%3D")
+print(df)
