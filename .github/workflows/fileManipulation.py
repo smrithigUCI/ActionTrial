@@ -14,7 +14,7 @@ blob_list =[]
 print('Hi')
 sas_i=generate_blob_sas(account_name=account_name,container_name=container_name,blob_name='myDate2.txt',account_key=account_key,permissions=BlobSasPermissions(read=True),expiry=datetime.utcnow()+timedelta(hours=1))
 print(sas_i)
-df=pd.read_csv("https://sunflowerweedimage.blob.core.windows.net/sunfloweweedimagecontainer/myDate2.txt?sp=racw&st=2023-05-10T09:46:35Z&se=2023-05-23T17:46:35Z&spr=https&sv=2022-11-02&sr=b&sig=YQ4cTyFbPZKjQDdEIuHl2EzY6W0C3iWfXXmpA%2FzBH%2Bc%3D")
+df=pd.read_csv("https://sunflowerweedimage.blob.core.windows.net/sunfloweweedimagecontainer/myDate2.txt?sp=r&st=2023-05-10T10:18:44Z&se=2023-06-30T18:18:44Z&spr=https&sv=2022-11-02&sr=b&sig=X4ZIq3tt0kahLKDGosrjfvcKcoQzGMXM0yw8oYgSFM4%3D")
 try:
     df[date.today()];
     print('all good')
