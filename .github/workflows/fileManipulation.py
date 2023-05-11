@@ -12,9 +12,9 @@ print('Hi')
 container_client = blob_service_client.get_container_client(container_name)
 blob_list =[]
 print('Hi')
-sas_i=generate_blob_sas(account_name=account_name,container_name=container_name,blob_name='myDate2.txt',account_key=account_key,permissions=BlobSasPermissions(read=True),expiry=datetime.utcnow()+timedelta(hours=1))
+sas_i=generate_blob_sas(account_name=account_name,container_name=container_name,blob_name='myDate.txt',account_key=account_key,permissions=BlobSasPermissions(read=True),expiry=datetime.utcnow()+timedelta(hours=1))
 print(sas_i)
-df=pd.read_csv("https://sunflowerweedimage.blob.core.windows.net/sunfloweweedimagecontainer/myDate2.txt?sp=r&st=2023-05-10T10:18:44Z&se=2023-06-30T18:18:44Z&spr=https&sv=2022-11-02&sr=b&sig=X4ZIq3tt0kahLKDGosrjfvcKcoQzGMXM0yw8oYgSFM4%3D")
+df=pd.read_csv("https://sunflowerweedimage.blob.core.windows.net/sunfloweweedimagecontainer/myDate2.txt?"+sas_i")
 try:
     df[date.today()];
     print('all good')
