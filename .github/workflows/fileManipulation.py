@@ -47,4 +47,5 @@ print(df.columns)
 for i in df.columns:
     print(i)
     if i==str(date.today()):
+        print('starting pump')
         startPump();
