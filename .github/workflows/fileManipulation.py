@@ -15,7 +15,7 @@ def startPump():
     headers = {"Content-Type": "application/json","Authorization": "Basic cm9vdDowMDAwMDAwMA==","Cookie": "Cookie=adamsessionid=12965427BA2"}
     Flag = True;
     while(Flag):
-        response = requests.request("POST", self.url, json=payload, headers=headers)
+        response = requests.request("POST", "https://169.234.25.18/do_value/slot_0/ch_0", json=payload, headers=headers)
         time.sleep(58)
         print(response)
         Flag = False;
