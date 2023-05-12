@@ -26,9 +26,9 @@ def startPump():
     if response1.status_code == 200:
         msg = "The first preventive herbicide spray is done kindly place the robot on the field to monitor the further emergence of weed"
         pushbullet_notification("First preventive herbicide spray done",msg)
-        else:
-            msg = f"The preventive spray is predicted for {contents}"
-            pushbullet_notification("Today is not the predicted date for the preventive herbicide spray",msg)
+    else:
+        msg = f"The preventive spray is predicted for {contents}"
+        pushbullet_notification("Today is not the predicted date for the preventive herbicide spray",msg)
 
 account_name='sunflowerweedimage'
 account_key='+55v1G3ZgPTBu2p9iu6YXfi3SrS+jXkPX9eR4pydpO6q5OCKyScdpLMzMLe9YiGwHbXa1viUUBflu+ASt+RoWKg=='
