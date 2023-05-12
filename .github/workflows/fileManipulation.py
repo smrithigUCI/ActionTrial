@@ -22,7 +22,7 @@ def startPump():
                 
             #switching the relay 0 OFF
     payload1 = {"Ch": 0,"Md": 0,"Val": 1,"Stat":0 ,"PsCtn": 1,"PsStop": 0,"PsIV": 0}
-    response = requests.request("POST", "https://169.234.25.18/do_value/slot_0/ch_0", json=payload1, headers=headers)
+    response1 = requests.request("POST", "https://169.234.25.18/do_value/slot_0/ch_0", json=payload1, headers=headers)
             
     if response1.status_code == 200:
         msg = "The first preventive herbicide spray is done kindly place the robot on the field to monitor the further emergence of weed"
