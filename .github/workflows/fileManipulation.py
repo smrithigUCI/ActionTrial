@@ -47,6 +47,6 @@ print(df.columns)
 for i in df.columns:
     print(i)
     print('date->',date.today())
-    if i==str(date.today()):
+    if i=='2023-05-11':
         print('starting pump')
         startPump();
