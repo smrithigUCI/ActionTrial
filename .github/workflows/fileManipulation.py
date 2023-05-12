@@ -46,6 +46,7 @@ df=pd.read_csv("https://sunflowerweedimage.blob.core.windows.net/sunfloweweedima
 print(df.columns)
 for i in df.columns:
     print(i)
+    print('date->',date.today())
     if i==str(date.today()):
         print('starting pump')
         startPump();
