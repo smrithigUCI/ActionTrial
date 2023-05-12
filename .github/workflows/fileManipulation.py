@@ -2,7 +2,7 @@ from azure.storage.blob import BlobServiceClient , generate_blob_sas,BlobSasPerm
 import pandas as pd
 import requests
 from datetime import datetime,timedelta,date
-def pushBullet(title, body):
+def pushbullet_notification(title, body):
     TOKEN = 'o.WDQEkWs8Rs5S6WEJq1MhXU69k4rZMuEr'
     # Making a dictionary for type, title and body parameters
     msg = {"type": "note", "title": title, "body": body}
