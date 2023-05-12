@@ -1,3 +1,4 @@
+import requests
 payload = { "Ch": 0,"Md": 0,"Val": 1,"Stat": 1,"PsCtn": 1,"PsStop": 0,"PsIV": 0}
 headers = {"Content-Type": "application/json","Authorization": "Basic cm9vdDowMDAwMDAwMA==","Cookie": "Cookie=adamsessionid=12965427BA2"}
 Flag = True;
